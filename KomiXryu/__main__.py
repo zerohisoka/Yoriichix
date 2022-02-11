@@ -81,14 +81,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/e627baf23c5cd3e0cff73.mp4)
-────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+────「 [{Yoriichi Tsugikuni}](https://telegra.ph/file/428de1e8a606f41fecf0c.mp4) 」────
+*Hello! {},*
+*✪ I'm Yoriichi an - theme group management bot from demon slayer.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+✓• *Uptime:* {}
+✓• {} *User, Across* {} *Chats.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+✪ Hit /help to see my breathing techniques. ××
 """
+
 
 buttons = [
     [
