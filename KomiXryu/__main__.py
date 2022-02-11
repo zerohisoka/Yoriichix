@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import KomiXryu.modules.sql.users_sql as sql
+import YoriichiRobot.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from KomiXryu import (
+from YoriichiRobot import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -32,9 +32,9 @@ from KomiXryu import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from KomiXryu.modules import ALL_MODULES
-from KomiXryu.modules.helper_funcs.chat_status import is_user_admin
-from KomiXryu.modules.helper_funcs.misc import paginate_modules
+from YoriichiRobot.modules import ALL_MODULES
+from YoriichiRobot.modules.helper_funcs.chat_status import is_user_admin
+from YoriichiRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -115,15 +115,23 @@ buttons = buttons = [
  
     
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Hey there! Myself [Yoriichi](https://telegra.ph/file/ff908d2500a8d346459d3.jpg).
+I'm a Demon Slayer I will help your  groups from titan with my katana ! Have a look at the following for an idea of some of the things I can help you with.
+*Main* commands available:
+ ➛ /help: PM's you this message.
+ ➛ /help <module name>: PM's you info about that module.
+ ➛ /bug <error name> : inform support about that error 
+ ➛ /donate: information on how to donate!
+ ➛ /settings: 
+   ❂ in PM: will send you your settings for all supported modules.
+   ❂ in a group: will redirect you to pm, with all that chat's settings.
+"""
 
-START_IMG = "https://telegra.ph/file/d32d70709d5807fe18fda.jpg"
-START_MSG = "Heyyo, Komi here to help!!"
+START_IMG = "https://telegra.ph/file/39994a3adbfeaaa135db3.mp4"
+START_MSG = "Heyyo, Yoriichi here to help!!"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Ryu_God \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """❂ I'm Free for Everyone ❂"""
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -136,7 +144,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("KomiXryu.modules." + module_name)
+    imported_module = importlib.import_module("YoriichiRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
