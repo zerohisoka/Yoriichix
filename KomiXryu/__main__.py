@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 ────「 [{Yoriichi Tsugikuni}](https://telegra.ph/file/428de1e8a606f41fecf0c.mp4) 」────
 *Hello! {},*
-*✪ I'm Yoriichi an - theme group management bot from demon slayer.*
+✪ I'm Yoriichi an - theme group management bot from demon slayer.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✓• *Uptime:* {}
 ✓• {} *User, Across* {} *Chats.*
