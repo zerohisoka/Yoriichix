@@ -42,7 +42,7 @@ from telegram.error import (
     NetworkError,
     TelegramError,
     TimedOut,
-    Unauthorized,
+    Unauthorized, 
 )
 from telegram.ext import (
     CallbackContext,
@@ -386,9 +386,9 @@ def help_button(update, context):
 
 def komi_about_callback(update, context):
     query = update.callback_query
-    if query.data == "komi_":
+    if query.data == "yoriichi_":
         query.message.edit_text(
-            text="๏ I'm *Komi*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Yoriichi*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -396,29 +396,29 @@ def komi_about_callback(update, context):
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
             "\n\n_Komi's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for Komi - San.",
+            "\n\n Click on button bellow to get basic help for Yoriichi Tsugikuni.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="komi_admin"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/Komiupdates"),
+                    InlineKeyboardButton(text="Admins", callback_data="yoriichi_admin"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/YoriichiXupdates"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="komi_support"),
-                    InlineKeyboardButton(text="Otaku Chat", url="https://t.me/Otaku_zon"),
+                    InlineKeyboardButton(text="Support", callback_data="yoriichi_support"),
+                    InlineKeyboardButton(text="Anime Chat", url="https://t.me/animechataura"),
                  ],
                  [
-                    InlineKeyboardButton(text="Darling", url="https://t.me/Ryu_God"),
+                    InlineKeyboardButton(text=""Kinoe, url="https://t.me/Millionaire_Kambe"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="komi_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="yoriichi_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "komi_back":
+    elif query.data == "yoriichi_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -433,10 +433,10 @@ def komi_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "komi_admin":
+    elif query.data == "yoriichi_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Komi - San now ready to manage your group."
+            "\nCongragulations, Yoriichi tsugikuni now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -450,7 +450,7 @@ def komi_about_callback(update, context):
             ),
         )
 
-    elif query.data == "komi_notes":
+    elif query.data == "yoriichi_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -458,22 +458,22 @@ def komi_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="komi_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="yoriichi_")]]
             ),
         )
-    elif query.data == "komi_support":
+    elif query.data == "yoriichi_support":
         query.message.edit_text(
-            text="*๏ Komi support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Komi.",
+            text="*๏ Yoriichi support chats*"
+            "\nJoin My Support Group/Channel for see or report a problem on Yoriichi.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/Komisansupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/Komiupdates"),
+                    InlineKeyboardButton(text="Support", url="t.me/JinWooXsupport"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/JinWooXsupport"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="komi_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="yoriichi_"),
                  
                  ]
                 ]
@@ -481,9 +481,9 @@ def komi_about_callback(update, context):
         )
 
 
-    elif query.data == "komi_credit":
+    elif query.data == "yoriichi_credit":
         query.message.edit_text(
-            text=f"๏ Credis for Komi\n"
+            text=f"๏ Credis for Yoriichi\n"
             "\nHere Developers Making And Give Inspiration For Made The EmikoRobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -535,7 +535,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="komi_")
+                    InlineKeyboardButton(text="Go Back", callback_data="yoriichi_")
                  ]
                 ]
             ),
@@ -826,7 +826,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "[I'm Alive Now!](https://telegra.ph/file/a85f35499ecedc8771e8e.mp4)",
+                "[I'm Ready to slay some demons!](https://telegra.ph/file/1ef71550f3672e3028edc.mp4)",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
@@ -850,7 +850,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        komi_about_callback, pattern=r"komi_", run_async=True
+        komi_about_callback, pattern=r"yoriichi_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
