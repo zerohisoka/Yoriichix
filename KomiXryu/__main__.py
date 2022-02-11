@@ -245,17 +245,17 @@ def start(update: Update, context: CallbackContext):
             )
     else:
          update.effective_message.reply_photo(
-            START_IMG, "ʏᴏ, Komi ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            START_IMG, "Yo, Yoriichi is here to help you slay some demons!\n<b>Slaying Demon since:</b> <code>{}</code>".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
              reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="❤Sᴜᴘᴘᴏʀᴛ❤", url="https://telegram.dog/Komisansupport")
+                  InlineKeyboardButton(text="⚔️Support ⚔️", url="https://t.me/JinWooXsupport")
                   ],
                   [
-                  InlineKeyboardButton(text="🔰Uᴘᴅᴀᴛᴇs🔰", url="https://telegram.dog/Komiupdates")
+                  InlineKeyboardButton(text="🔰Updates🔰", url="https://t.me/YoriichiXupdates")
                   ]
                 ]
             ),
