@@ -92,23 +92,28 @@ PM_START_TEXT = """
 """
 
 
-buttons = [
+buttons = buttons = [
     [
-        InlineKeyboardButton(text="About Komi", callback_data="emiko_"),
-    ],
-    [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
-        ),
+            text="➕️ ADD YORIICHI TO YOUR GROUP ➕️",url="t.me/YoriichiRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
-            text="💝 Add Komi To Your Group 💝", url="t.me/KomiXryu_Bot?startgroup=new"),
+              text="🔐 Command & Help", callback_data="help_back"),
+     
+    ],   
+    [
+        InlineKeyboardButton(
+            text="📮 Update Channel", url="https://t.me/YoriichiXupdates"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="🐱 SUPPORT", url="https://t.me/JinWooXsupport"
+         ),
     ],
 ]
-
-
+ 
+    
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
