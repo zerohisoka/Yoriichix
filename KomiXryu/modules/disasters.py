@@ -3,7 +3,7 @@ import json
 import os
 from typing import Optional
 
-from EmikoRobot import (
+from YoriichiRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
