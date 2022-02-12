@@ -13,13 +13,13 @@ from EmikoRobot import (
     WOLVES,
     dispatcher,
 )
-from EmikoRobot.modules.helper_funcs.chat_status import (
+from YoriichiRobot.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from EmikoRobot.modules.helper_funcs.extraction import extract_user
-from EmikoRobot.modules.log_channel import gloggable
+from YoriichiRobot.modules.helper_funcs.extraction import extract_user
+from YoriichiRobot.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.utils.helpers import mention_html
@@ -30,7 +30,7 @@ ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "EmikoRobot/elevated_users.json"
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
     bot = context.bot
     if not user_id:
-        reply = "That...is a chat! baka ka omae?"
+        reply = "That...is a chat! Honto-ne baka."
 
     elif user_id == bot.id:
         reply = "This does not work that way."
