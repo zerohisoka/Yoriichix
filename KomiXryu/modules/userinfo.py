@@ -18,7 +18,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
     
-from KomiXryu import (
+from YoriichiRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -31,16 +31,16 @@ from KomiXryu import (
     StartTime,
     SUPPORT_CHAT,
 )
-from KomiXryu.__main__ import STATS, TOKEN, USER_INFO
-from KomiXryu.modules.sql import SESSION
-import KomiXryu.modules.sql.userinfo_sql as sql
-from KomiXryu.modules.disable import DisableAbleCommandHandler
-from KomiXryu.modules.sql.global_bans_sql import is_user_gbanned
-from KomiXryu.modules.sql.afk_sql import is_afk, set_afk
-from KomiXryu.modules.sql.users_sql import get_user_num_chats
-from KomiXryu.modules.helper_funcs.chat_status import sudo_plus
-from KomiXryu.modules.helper_funcs.extraction import extract_user
-from KomiXryu import telethn
+from YoriichiRobot.__main__ import STATS, TOKEN, USER_INFO
+from YoriichiRobot.modules.sql import SESSION
+import YoriichiRobot.modules.sql.userinfo_sql as sql
+from YoriichiRobot.modules.disable import DisableAbleCommandHandler
+from YoriichiRobot.modules.sql.global_bans_sql import is_user_gbanned
+from YoriichiRobot.modules.sql.afk_sql import is_afk, set_afk
+from YoriichiRobot.modules.sql.users_sql import get_user_num_chats
+from YoriichiRobot.modules.helper_funcs.chat_status import sudo_plus
+from YoriichiRobot.modules.helper_funcs.extraction import extract_user
+from YoriichiRobot import telethn
 
 def no_by_per(totalhp, percentage):
     """
@@ -298,25 +298,25 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is my 'ᴅᴀʀʟɪɴɢ'."
+        text += "\n\nThis person is my 'Ubuyashiki'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is my 'Onii Chan'."
+        text += "\n\nThis user is my 'Kinoe'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is my 'Sensei'."
+        text += "\n\nThis person is my 'Hashira'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is my 'Senpai'."
+        text += "\n\nThis person is my 'Kakushi'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nthis person is my 'Best Friend'."
+        text += "\n\nthis person is my 'Hinoe'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis person is my 'Friend'."
+        text += "\n\nThis person is my 'Mizunoto'."
         disaster_level_present = True
-    elif user.id == 1635151800:
-         text += "\n\nMy owner. @Ryu_God. My Darling."
+    elif user.id == 5070015537:
+         text += "\n\nMy owner. @Millionaire_Kambe. My Ubuyashiki."
          disaster_level_present = True
 
     try:
@@ -353,9 +353,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/komiupdates/10"),
+                                "Health", url="https://t.me/YoriichiXupdates/7"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/komiupdates/4")
+                                "Disaster", url="https://t.me/YoriichiXupdates/5")
+                        ],)
                         ],
                     ]
                 ),
@@ -371,9 +372,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/komiupdates/10"),
+                                "Health", url="https://t.me/YoriichiXupdates/7"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/komiupdates/4")
+                                "Disaster", url="https://t.me/YoriichiXupdates/5")
                         ],
                     ]
                 ),
@@ -468,8 +469,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Komiupdates)\n\n"
-            + "╘══「 Powered By [Komi - San](https://t.me/KomiXryu_Bot) | [Network](https://t.me/toman_network) 」\n",
+            + f"\n\n✦ [Support](https://t.me/YoriichiXsupport) | ✦ [Updates](https://t.me/YoriichiXupdates)\n\n"
+            + "╘══「 by [Itachi](https://t.me/Millionaire_Kambe) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -481,9 +482,9 @@ def stats(update, context):
                         "\n*Bot Statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Komiupdates)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/YoriichiXsupport) | ✦ [Updates](https://t.me/YoriichiXupdates)\n\n"
                 )
-                + "╘══「 Powered By [Komi - San](https://t.me/KomiXryu_Bot) | [Network](https://t.me/toman_network)」\n"
+                + "╘══「 by [Itachi](https://t.me/Millionaire_Kambe) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -536,7 +537,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Erm... yeah, I only trust the Kinoe to set my bio.",
             )
             return
 
