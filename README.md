@@ -1,1 +1,1 @@
-# KomiXbot
+# YoriichiRobot
