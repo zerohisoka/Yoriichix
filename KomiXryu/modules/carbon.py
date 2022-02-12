@@ -4,9 +4,9 @@ from pyrogram import __version__ as z
 from telethon import __version__ as s
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters
-from EmikoRobot import pbot
-from EmikoRobot.utils.errors import capture_err
-from EmikoRobot.utils.functions import make_carbon
+from YoriichiRobot import pbot
+from YoriichiRobot.utils.errors import capture_err
+from YoriichiRobot.utils.functions import make_carbon
 
 
 @pbot.on_message(filters.command("carbon"))
@@ -24,15 +24,15 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/11b5922a33de9968cedfe.jpg"
+MEMEK = "https://telegra.ph/file/440ed462ba2600fb1509d.jpg"
 
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hey I'm Emiko Robot** 
+        caption=f"""⚔️ **Hey I'm Yoriichi Robot** 
 
-**Owner repo : [sena-ex](https://t.me/excrybaby)**
+**Owner repo : [Itachi](https://t.me/Millionaire_Kambe)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
@@ -44,9 +44,9 @@ async def repo(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://github.com/kennedy-ex/emikorobot"), 
+                        "Repo", url="https://github.com/Yoriichi-Tsugikuni/YoriichiRobot"), 
                     InlineKeyboardButton(
-                        "Support", url="https://t.me/emikosupport")
+                        "Support", url="https://t.me/YoriichiXsupport")
                 ]
             ]
         )
