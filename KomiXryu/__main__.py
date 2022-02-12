@@ -108,7 +108,7 @@ buttons = buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🐱 SUPPORT", url="https://t.me/JinWooXsupport"
+            text="🐱 SUPPORT", url="https://t.me/YoriichiXsupport"
          ),
     ],
 ]
@@ -252,7 +252,7 @@ def start(update: Update, context: CallbackContext):
              reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="⚔️Support ⚔️", url="https://t.me/JinWooXsupport")
+                  InlineKeyboardButton(text="⚔️Support ⚔️", url="https://t.me/YoriichiXsupport")
                   ],
                   [
                   InlineKeyboardButton(text="🔰Updates🔰", url="https://t.me/YoriichiXupdates")
@@ -410,7 +410,7 @@ def komi_about_callback(update, context):
                     InlineKeyboardButton(text="Anime Chat", url="https://t.me/animechataura"),
                  ],
                  [
-                    InlineKeyboardButton(text=""Kinoe, url="https://t.me/Millionaire_Kambe"),
+                    InlineKeyboardButton(text="Ubuyashiki", url="https://t.me/Millionaire_Kambe"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="yoriichi_back"),
@@ -469,8 +469,8 @@ def komi_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/JinWooXsupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/JinWooXsupport"),
+                    InlineKeyboardButton(text="Support", url="t.me/YoriichiXsupport"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/YoriichiXupdates"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="yoriichi_"),
@@ -484,7 +484,7 @@ def komi_about_callback(update, context):
     elif query.data == "yoriichi_credit":
         query.message.edit_text(
             text=f"๏ Credis for Yoriichi\n"
-            "\nHere Developers Making And Give Inspiration For Made The EmikoRobot",
+            "\nHere Developers Making And Give Inspiration For Made The MarinRobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
