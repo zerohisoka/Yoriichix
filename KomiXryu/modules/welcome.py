@@ -4,8 +4,8 @@ import re
 import time
 from functools import partial
 from io import BytesIO
-import KomiXryu.modules.sql.welcome_sql as sql
-from KomiXryu import (
+import YoriichiRobot.modules.sql.welcome_sql as sql
+from YoriichiRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -15,19 +15,19 @@ from KomiXryu import (
     LOGGER,
     dispatcher,
 )
-from EmikoRobot.modules.helper_funcs.chat_status import (
+from YoriichiRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from KomiXryu.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from KomiXryu.modules.helper_funcs.msg_types import get_welcome_type
-from KomiXryu.modules.helper_funcs.handlers import MessageHandlerChecker
-from KomiXryu.modules.helper_funcs.string_handling import (
+from YoriichiRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from YoriichiRobot.modules.helper_funcs.msg_types import get_welcome_type
+from YoriichiRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from YoriichiRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from KomiXryu.modules.log_channel import loggable
-from KomiXryu.modules.sql.global_bans_sql import is_user_gbanned
+from YoriichiRobot.modules.log_channel import loggable
+from YoriichiRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
